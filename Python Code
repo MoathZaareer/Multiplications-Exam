@@ -1,0 +1,45 @@
+#Python Code for Multiplication table Exam
+import math
+import random
+
+i = range(1, 11)
+j = range(1, 11)
+u = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+o = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+marks = 0
+trails = 0
+
+
+for z in i:
+  z = random.choice(u)
+  u.remove(z)
+  for x in j:
+    x = random.choice(o)
+    o.remove(x)
+    print('Find: ' + str(z) + ' x ' +str(x) + ' 🤔')
+    ques = z * x
+    ans = input('Answer: ')
+    answer = int(ans)
+    if answer == ques:
+      marks += 1
+    else:
+      marks += 0
+    trails += 1
+    if trails == 10:
+      print('You passed 10 question great job! 🙌')
+    elif trails == 30:
+      print('Now you completed 30 question 😻!')
+    elif trails == 50:
+      print('hff half done so far! Keep up 💪')
+    elif trails == 70:
+      print('You passed 70! Amazing effort 👽')
+    elif trails == 90:
+      print('Amazing job 🤩 only 10 Remain!')
+    elif trails == 99:
+      print('LAST ONE!! 🤑🤓🕺')
+
+  o = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  
+
+print(str(marks) + ' out of 100')
+print('Moneeeyyyy 🤑🤑🤑🤑🤑🤑')
